@@ -1,4 +1,4 @@
-import { TypeOrmModule } from '@nestjs/typeorm';
+// import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { DatabaseModule } from '../database/database.module';
 import { OnModuleInit, Module } from '@nestjs/common';
