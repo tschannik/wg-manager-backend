@@ -1,3 +1,4 @@
+import { Commune } from './../../domain/models/commune.entity';
 import { User } from './../../domain/models/user.entity';
 import { Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -10,6 +11,9 @@ export abstract class BaseService<T> {
 
   @InjectRepository(User)
   protected readonly userRepository: Repository<User>;
+
+  @InjectRepository(Commune)
+  protected readonly communeRepository: Repository<Commune>;
 
   constructor(private readonly entityRef: new () => T) {}
 
